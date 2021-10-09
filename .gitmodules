@@ -1,0 +1,3 @@
+[submodule "zola_site/themes"]
+	path = zola_site/themes
+	url = https://git.sr.ht/~kogeletey/karzok
