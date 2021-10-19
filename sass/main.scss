@@ -3,12 +3,12 @@
 
 html {
     background-color:rgb(29, 19, 45); // Main background colour
-    color: #888888; // Main foreground color
+    color: #888; // Main foreground color
 }
 a {
-    color: $black;
+    color: $black; // what is this?
     &:hover {
-        color: #55A; // Menu hover colour
+        color: $white; // Menu hover colour
     }
 }
 .header {
@@ -23,3 +23,21 @@ a {
         border-color:rgb(155,100,180); // border selection colour in header
     }
 }
+.menu {
+    &-a {
+        color: #888;
+        background-color: rgb(100, 77, 111);
+        box-shadow: 8px 8px 8px 0 rgb(0, 0, 0);
+    }
+    &-time {
+        color: $dark3;
+    }
+    &-a:hover {
+        border-color: transparent;
+        outline: 5px solid rgb(75, 40, 64); // Outline of menu on home page
+    }
+    & p {
+        color: $dark2;
+    }
+}
+
