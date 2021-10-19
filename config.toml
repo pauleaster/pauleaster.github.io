@@ -1,6 +1,7 @@
 # The URL the site will be built for
 base_url = "https://pauleaster.dev"
-these = "karzok"
+theme = "karzok"
+output_dir = "public"
 
 # Whether to automatically compile all Sass files in the sass directory
 compile_sass = true
@@ -12,6 +13,32 @@ build_search_index = true
 # Whether to do syntax highlighting
 # Theme can be customised by setting the `highlight_theme` variable to a theme supported by Zola
 highlight_code = true
+highlight_theme = "base16-ocean-dark"
+
+render_emoji = true
+
+# taxonomies = [
+#     {name = "authors"},
+# ]
 
 [extra]
 # Put all your custom variables here
+show_word_count = false
+show_reading_time = false
+
+[[extra.header]]
+text = "Meta"
+link = "$base_url/meta"
+
+[[extra.menu]]
+text = "Data Science"
+link = "$base_url/datascience"
+
+[[extra.menu]]
+text = "Machine Learning"
+link = "$base_url/machinelearning"
+
+[[extra.menu]]
+text = "Web Development"
+link = "$base_url/webdevopment"
+
