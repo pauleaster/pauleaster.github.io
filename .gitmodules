@@ -1,9 +1,9 @@
 [submodule "zola_site/themes"]
 	path = zola_site/themes
-	url = https://git.sr.ht/~kogeletey/karzok
+	url = git@github.com:pauleaster/karzok_fork.git
 [submodule "pauleaster.github.io/themes"]
 	path = pauleaster.github.io/themes
-	url = https://git.sr.ht/~kogeletey/karzok
+	url = git@github.com:pauleaster/karzok_fork.git
 [submodule "themes/karzok"]
 	path = themes/karzok
-	url = https://git.sr.ht/~kogeletey/karzok
+	url = git@github.com:pauleaster/karzok_fork.git

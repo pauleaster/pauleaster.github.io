@@ -6,19 +6,20 @@ html {
     color: #888; // Main foreground color
 }
 a {
-    color: $black; // what is this?
+    color: rgb(100,130,200); // sidebar text colour
     &:hover {
-        color: $white; // Menu hover colour
+        color: $white; // Main menu hover colour
     }
 }
 .header {
-    border-color: #550055; // Header horizontal line
+    border-color: #505; // Header horizontal line
     &-span {
         color: rgb(100,130,200); // header text color
     }
     &-span:hover {
-        color: rgb(173,127,205);;
+        color: rgb(173,127,205); // header hover colour
     }
+    &-span:hover,
     &-active {
         border-color:rgb(155,100,180); // border selection colour in header
     }
@@ -37,7 +38,83 @@ a {
         outline: 5px solid rgb(75, 40, 64); // Outline of menu on home page
     }
     & p {
-        color: $dark2;
+        color: $white; // Secondary menu text
     }
 }
+.page {
+    a { // Link behaviour!!
+        color: rgb(0,0,225);
+        text-decoration: underline;
+        &:hover {
+            color: rgb(100,100,255);
+            border-bottom: $black solid 1px;
+        }
+    }
+    blockquote {
+        color:rgb(101, 135, 202);
+        a {
+            border-bottom: 1px solid $yellow;
+        }
+    }
+    table {
+        th {
+            border: 1px solid $red;
+            background-color: $white;
+        }
+    }
+    pre {
+        background-color: #f6f7f6;
+    }
+    code {
+        color: $light1;
+        // background-color: transparent;
+    }
+    kbd {
+        box-shadow: inset $light2 0px -1px 0;
+    }
+}
+.sections {
+    time {
+        color: $dark2; // updated colour
+    }
 
+}
+.sidebar {
+    background-color: rgb(7,4,32);
+    &-li{
+        opacity: 1;
+        &::before {
+            background-color: #f6f7f6;
+        }
+    }
+    &-link {
+        border-left: 1px solid #505; // left verticle line in the sub-menu
+    }
+    &-link-a__active,
+    &-link-a:hover,
+    &-link-div:hover {
+        background-color: rgb(84, 47, 101);// left menu highlight colour
+        color: rgb(173,127,205);
+        svg [fill] {
+            fill: rgb(173,127,205);;
+        }
+    }
+}
+.toc {
+    &-ul {
+        border-color: #505;
+    }
+    &-li:hover::before,
+    &-li__active::before {
+        border-color: rgb(173,127,205);
+    }
+}
+.footer {
+    font-family: 'Courier Prime', monospace;
+    background-color: $black;
+    border-color: $black;
+    color: $dark1;
+    &-a {
+        color: $dark1;
+    }
+}
