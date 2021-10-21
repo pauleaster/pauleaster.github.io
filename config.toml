@@ -1,5 +1,5 @@
 # The URL the site will be built for
-base_url = "https://pauleaster.dev"
+base_url = "http://pauleaster.dev"
 theme = "karzok"
 output_dir = "public"
 
@@ -23,8 +23,8 @@ render_emoji = true
 
 [extra]
 # Put all your custom variables here
-show_word_count = false
-show_reading_time = false
+show_word_count = true
+show_reading_time = true
 
 [[extra.header]]
 text = "Meta"
@@ -41,4 +41,8 @@ link = "$base_url/machinelearning"
 [[extra.menu]]
 text = "Web Development"
 link = "$base_url/webdevopment"
+
+[[extra.menu]]
+text = "Astrophysics"
+link = "$base_url/astrophysics"
 

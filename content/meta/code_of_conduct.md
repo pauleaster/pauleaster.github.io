@@ -2,6 +2,7 @@
 title = "Code of Conduct"
 date = "2019-03-11"
 weight = 1
+description = "test"
 +++
 
 # Our Pledge

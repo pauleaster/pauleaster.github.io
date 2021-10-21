@@ -12,6 +12,7 @@ a {
     }
 }
 .header {
+    height: 36px;
     border-color: #505; // Header horizontal line
     &-span {
         color: rgb(100,130,200); // header text color
@@ -23,6 +24,10 @@ a {
     &-active {
         border-color:rgb(155,100,180); // border selection colour in header
     }
+}
+.welcome {
+    font-weight: 400;
+    font-size: 50px;
 }
 .menu {
     &-a {
@@ -89,6 +94,7 @@ a {
     }
     &-link {
         border-left: 1px solid #505; // left verticle line in the sub-menu
+        
     }
     &-link-a__active,
     &-link-a:hover,
