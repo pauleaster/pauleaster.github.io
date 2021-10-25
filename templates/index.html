@@ -1,8 +1,36 @@
 {% extends 'karzok/templates/index.html' %}
 
-{% block welcome %}
-<h1 class="welcome"> Paul Easter's website, "$base_url"</h1>
-<p class="welcome-p">
-    Data science, machine learning, application development, web development
-</p>
-{% endblock welcome %}
+
+    <body>
+        {% block body %}
+            {% block content %}
+            {% block welcome %}
+            <h1 class="welcome"> Paul Easter's website</h1>
+            <p class="welcome-p">
+                Data science, machine learning, application development, web development
+            </p>
+            {% endblock welcome %}
+            <section class="menu">
+                {% if config.extra.menu %}
+                {% for link in config.extra.menu %}
+                {% set item_link = link.link  | replace(from="$base_url", to=config.base_url) %}
+                        <a class="menu-a" href="{{ item_link | safe }}">
+                        <div class="menu-div">
+                            <h3 class="menu-index"> {{ link.text }} </h3>
+                            <p>{{ link.description }}</p>
+                        </div>
+                    </a>
+                    {% endfor %}
+                </section>
+                {% endif %}
+                <section>
+                    
+                    <h1>
+                        <center> More Stuff </h1> </center>
+                        <p>fglkejrl kljlkrjgt ewrewlkj ewrjewrl</p>
+                   
+                </section>
+            {% endblock content %}
+        {% endblock body %}
+    </body>
+</html>

@@ -1,126 +1,116 @@
-@import "../themes/karzok/sass/main.scss";
+// Color system variables
+$black: #111111 !default;
+$dark3: #333333 !default;
+$dark2: #555555 !default;
+$dark1: #777777 !default;
+$light1: #999999 !default;
+$light2: #bbbbbb !default;
+$light3: #dddddd !default;
+$light4: #f9f9f9  !default;
+$white: #ffffff !default;
+$red: #ff4136 !default;
+$orange: #ff851b !default;
+$yellow: #ffdc00 !default;
+$green: #2ecc40 !default;
+$aqua: #7fdbff !default;
+$blue: #0074d9 !default;
+$purple: #b10dc9 !default;
+$brown: #85144b !default;
+
+$main-blue: rgb(100,130,200);
+$background-color: rgb(29, 19, 45); 
+$selected_color: rgb(173,127,205);
+$highlighted-color: rgb(84, 47, 101);
+
+// :root {
+//     --black: #{$black};
+//     --white: #{$white};
+//     --green: #{$green};
+// }
+
+// $black: var(--black);
+// $green: var(--green);
+// $white: var(--white);
 
 
-html {
-    background-color:rgb(29, 19, 45); // Main background colour
+// Import components
+@import 'src/toc';
+@import 'src/sidebar';
+@import 'src/header';
+@import 'src/page';
+@import 'src/footer';
+@import 'src/menu';
+
+
+
+* {
+    margin: 0;
+    padding: 0;
+    border: 0;
+}
+
+html,
+body {
+    font-family: 'Roboto', sans-serif;
+    background-size: 100% 100%;
+    background-color:$background-color; // Main background colour
     color: #888; // Main foreground color
+    height: 95vh;
 }
+// body{
+//         padding:10px;
+//         padding-bottom:87px;   /* Height of the footer */
+// }
+// footer {
+//     position:absolute;
+//     bottom:0;
+//     width:100%;
+//     height:87px;   /* Height of the footer */
+//     background:#6cf;
+//  }
 a {
-    color: rgb(100,130,200); // sidebar text colour
+    text-decoration: none;
+    color: $main-blue; // sidebar text colour
     &:hover {
-        color: $white; // Main menu hover colour
+        color: $yellow; // Main menu hover colour
     }
 }
-.header {
-    height: 36px;
-    border-color: #505; // Header horizontal line
-    &-span {
-        color: rgb(100,130,200); // header text color
-    }
-    &-span:hover {
-        color: rgb(173,127,205); // header hover colour
-    }
-    &-span:hover,
-    &-active {
-        border-color:rgb(155,100,180); // border selection colour in header
-    }
+ul {
+    list-style: none;
 }
-.welcome {
-    font-weight: 400;
-    font-size: 50px;
-}
-.menu {
-    &-a {
-        color: #888;
-        background-color: rgb(100, 77, 111);
-        box-shadow: 8px 8px 8px 0 rgb(0, 0, 0);
-    }
-    &-time {
-        color: $dark3;
-    }
-    &-a:hover {
-        border-color: transparent;
-        outline: 5px solid rgb(75, 40, 64); // Outline of menu on home page
-    }
-    & p {
-        color: $white; // Secondary menu text
-    }
-}
-.page {
-    a { // Link behaviour!!
-        color: rgb(0,0,225);
-        text-decoration: underline;
-        &:hover {
-            color: rgb(100,100,255);
-            border-bottom: $black solid 1px;
-        }
-    }
-    blockquote {
-        color:rgb(101, 135, 202);
-        a {
-            border-bottom: 1px solid $yellow;
-        }
-    }
-    table {
-        th {
-            border: 1px solid $red;
-            background-color: $white;
-        }
-    }
-    pre {
-        background-color: #f6f7f6;
-    }
-    code {
-        color: $light1;
-        // background-color: transparent;
-    }
-    kbd {
-        box-shadow: inset $light2 0px -1px 0;
-    }
-}
-.sections {
-    time {
-        color: $dark2; // updated colour
-    }
 
+.docs {
+    display: flex;
+    justify-content: space-between;
+    margin-bottom: 25px;
+    margin-top: 15px;
 }
-.sidebar {
-    background-color: rgb(7,4,32);
-    &-li{
-        opacity: 1;
-        &::before {
-            background-color: #f6f7f6;
-        }
-    }
-    &-link {
-        border-left: 1px solid #505; // left verticle line in the sub-menu
-        
-    }
-    &-link-a__active,
-    &-link-a:hover,
-    &-link-div:hover {
-        background-color: rgb(84, 47, 101);// left menu highlight colour
-        color: rgb(173,127,205);
-        svg [fill] {
-            fill: rgb(173,127,205);;
-        }
+
+.welcome {
+    display: flex;
+    justify-content: center;
+    font-weight: 400;
+    font-size: 75px;
+    padding-top: 0.2em;
+    &-p {
+        display: flex;
+        justify-content: center;
     }
 }
-.toc {
-    &-ul {
-        border-color: #505;
+.error {
+    display: flex;
+    flex-flow: column;
+    align-items: center;
+    font-weight: 400;
+    margin-bottom: 2em;
+    min-height: calc(100vh - 87px);
+    & h1 {
+        font-size: 75px;
     }
-    &-li:hover::before,
-    &-li__active::before {
-        border-color: rgb(173,127,205);
+    & h2 {
+        font-size: 50px;
     }
-}
-.footer {
-    font-family: 'Courier Prime', monospace;
-    background-color: $black;
-    border-color: $black;
-    color: $dark1;
-    &-a {
-        color: $dark1;
+    & h3 {
+        font-size: 25px;
     }
 }

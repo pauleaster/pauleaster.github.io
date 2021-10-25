@@ -1,0 +1,111 @@
+$chevron-size: 20px;
+
+.sidebar {
+    position: sticky;
+    top: 1rem;
+    padding-left: 0;
+    height: calc(110vh - 1rem);
+    overflow-y: hidden;
+    width: 20vw;
+    text-decoration: none;
+    // &-li-a {
+    //     color: $main-blue; // sidebar text colour
+    //     &:hover {
+    //         color: $purple; // Main menu hover colour
+    //     }
+    // }
+    &-li {
+        display: flex;
+        padding: 8px 0;
+        margin-left: 0.25em;
+        text-decoration: none;
+        &-toggle {
+            position: absolute;
+            opacity: 0;
+        }
+        &::before {
+            content: '';
+            background-image: url('./chevron.svg');
+            background-size: $chevron-size $chevron-size;
+            height: $chevron-size;
+            width: $chevron-size;
+            transform: rotate(0deg);
+            transform-origin: 50% 50% 0px;
+            transition: transform 0.1s linear 0s;
+        }
+        
+        }
+        &-toggle:checked + &::before {
+            content: '';
+            background-image: url('./chevron.svg');
+            background-size: $chevron-size $chevron-size;
+            height: $chevron-size;
+            width: $chevron-size;
+            transform: rotate(90deg);
+            transform-origin: 50% 50% 0px;
+            transition: transform 0.1s linear 0s;
+        }
+        span {
+            cursor: pointer;
+            border-bottom: 5px $selected_color;
+            text-decoration: none;
+            &:hover {
+                color: $selected_color; // Main menu hover colour
+                
+            }
+        // &-a:hover{
+        //     color:$selected_color;
+        // }
+    }
+    &-link {
+        display: flex;
+        text-align: left;
+        border-left: none;
+        margin-left: 2rem;
+        text-decoration: none;
+        &-a {
+            display: flex;
+            padding: 8px 0;
+            text-decoration: none;
+        }
+        &-div {
+            opacity: 0;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            position: relative;
+            left: -5.5px;
+            svg[fill] {
+                padding-right: 5px;
+                display: block;
+                fill: $main-blue; 
+            }
+        }
+    }
+    &-link-a:hover,
+    &-link-div:hover {
+        // background-color: $highlighted-color;// left menu highlight colour
+        display: flex;
+        opacity: 1;
+        color: $selected_color;
+        text-decoration: none;
+    }
+    &-link-a__active {
+        // background-color: rgb(84, 47, 101);// left menu highlight colour
+        display: flex;
+        opacity: 1;
+        color: $selected_color;
+        svg [fill] {
+            fill: $selected_color;
+        text-decoration: none;
+
+        }
+    }
+    &-pages {
+        margin-left: 1em;
+    }
+    &-ul {
+        max-width: 100%;
+        text-decoration: none;
+    }
+}
