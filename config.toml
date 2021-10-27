@@ -28,6 +28,7 @@ render_emoji = true
 show_word_count = true
 show_reading_time = true
 localcdn = true
+favicon = "favicon.ico"
 
 [[extra.header]]
 text = "Meta"
