@@ -17,7 +17,8 @@
                         <a class="menu-a" href="{{ item_link | safe }}">
                         <div class="menu-div">
                             <h3 class="menu-index"> {{ link.text }} </h3>
-                            <p>{{ link.description }}</p>
+                                <p class={{ link.class }}>
+                                </p>
                         </div>
                     </a>
                     {% endfor %}

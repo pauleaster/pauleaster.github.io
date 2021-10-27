@@ -37,20 +37,24 @@ link = "$base_url/meta"
 [[extra.menu]]
 text = "Data Science"
 link = "$base_url/datascience"
-description = "Data sciency things"
+class = "datascience-p"
+
 
 [[extra.menu]]
 text = "Machine Learning"
 link = "$base_url/machinelearning"
-description = "Machine Learningy things"
+class = "machinelearning-p"
+
 
 [[extra.menu]]
 text = "Web Development"
-link = "$base_url/webdevopment"
-description = "Web Development thingies"
+link = "$base_url/webdevelopment"
+class = "webdevelopment-p"
+
 
 [[extra.menu]]
 text = "Astrophysics"
 link = "$base_url/astrophysics"
-description = "Astrophysicsy things"
+class = "astrophysics-p"
+
 
