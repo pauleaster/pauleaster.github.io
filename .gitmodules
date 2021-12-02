@@ -1,12 +1,3 @@
-[submodule "zola_site/themes"]
-	path = zola_site/themes
-	url = git@github.com:pauleaster/karzok_fork.git
-[submodule "pauleaster.github.io/themes"]
-	path = pauleaster.github.io/themes
-	url = git@github.com:pauleaster/karzok_fork.git
-[submodule "themes/karzok_2"]
-	path = themes/karzok_2
-	url = git@github.com:pauleaster/karzok_2.git
 [submodule "themes/karzok"]
 	path = themes/karzok
 	url = git@github.com:pauleaster/karzok_2.git
