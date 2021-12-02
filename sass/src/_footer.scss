@@ -1,6 +1,6 @@
 .footer {
     font-family: 'Roboto', sans-serif;
-    position:absolute;
+    position:fixed;
     // display: block;
     bottom:0;
     width: 100%;
@@ -13,8 +13,13 @@
         padding-left: 1em;
         font-size: 18px;
         margin-right: 25%;
+        // display: none;
     }
     &-a {
         color: $dark1;
+        
+    }
+    &-a:hover {
+        color: $selected_color;
     }
 }

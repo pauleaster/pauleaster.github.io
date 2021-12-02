@@ -5,5 +5,7 @@ description = "Zola (lightweight Jamstack), Django, Tauri (lightweight apps), us
 date = "2019-03-11"
 +++
 
-# Headings
-Some text here!
+# This website
+This website has been designed using Zola static website software with the Karzok template. The website has been succesfully run on an Apache Server and deployed using github actions.
+# Something else
+dsfsdfdsfds
