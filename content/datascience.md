@@ -2,6 +2,8 @@
 title = "Data Science"
 weight = 1
 date = "2021-01-12"
+
+
 [extra]
 math = true
 +++
@@ -11,6 +13,22 @@ math = true
 During four years of work in data science and astrophysics, I was involved a number of different projects which I managed with limited supervision. The first project analysed gravitational-wave data produced by numerical-relativity simulations of neutron star mergers along with associated equation of state parameters. The aim was to generate the gravitational-wave signal given the equation of state information.
 
 
+# Parameter estimation using Bayesian inference
+During my work at Monash University, I was fortunate to have the opportunity to contribute to the early development of the Bilby Bayesian inference package, <a href="https://pypi.org/project/bilby/" target="_blank">Bilby Pypi</a>, <a href="https://git.ligo.org/lscsoft/bilby" target="_blank">Bilby Gitlab</a>. I subsequently used Bilby to perform parameter estimation on gravitational-wave signals using two signal models that I developed. Numerical-relativity simulations predict that the gravitational waves emitted immediately after the merging of two neutron stars consist of three main frequency peaks which may drift slightly in frequency. I developed a model based on this
+prediction and by Bilby was able to perform parameter estimation of the predicted gravitational-wave signals.
+<div class="row">
+    <div class="column">
+    <a href="/time_freq_0ms_time_freq.png" target="_blank">
+    <img src="/time_freq_0ms_time_freq.png" title="Time and frequency fits" id="img1" style="width:100%">
+    </a></div>
+    <div class="column">
+    <a href="/BWPrimaryFrequency2sigma.pdf" target="_blank">
+    <img src="/BWPrimaryFrequency2sigma.pdf" title="Peak frequency inference"  id="img2" style="width:100%">
+    </a></div>
+</div>
+The first plot shows two different gravitational-wave signals in four subplots. The first gravitational-wave signal is shown in the upper subplots and the other in the lower subplots. The left subplots show the time domain gravitational-wave signal and the right subplots show the corresponding frequency-domain signal. In each subplot, the black signals are the true values and the shaded signals are the values predicted from the model. The second plot shows the inference of the main frequency, $f/_{peak}$.
+
+
 # Hierarchical machine learning model
 Following on from the analysis performed with Principal Component Analysis and the Random Forest and Lasso regressors, we developed a multi-layered machine learning algorithm that was trained to produce gravitational-wave spectra. We had a relatively small data set with 35 time-domain signals. Each of these waveforms were associated with system parameters on which we based our model. Of the thirteen system parameters, we found that we could achieve good results using Leave-One-Out Cross-Validation by using only three system parameters. The results were published in <a href="https://journals.aps.org/prd/abstract/10.1103/PhysRevD.100.043005" target="_blank">Physics Review D</a>, <a href="https://arxiv.org/abs/1811.11183" target="_blank">arXiv</a> and Chapter two of my <a href="https://github.com/pauleaster/PhDThesis/blob/71e87f2a70aab06d60ea0c9e65dc7666961d33c6/PaulEasterPhDThesis.pdf" target="_blank">PhD Thesis</a>. The following plot shows how well I was able to reconstruct the cross-validated spectrum for a given signal. 
 
@@ -18,11 +36,11 @@ Following on from the analysis performed with Principal Component Analysis and t
 <div class="row">
     <div class="column">
     <a href="/NewAllMatches35withCoRe.pdf" target="_blank">
-    <img src="/NewAllMatches35withCoRe.pdf" alt="Cross-Validated predicted signals" id="img1" style="width:100%">
+    <img src="/NewAllMatches35withCoRe.pdf" title="Cross-Validated predicted signals" id="img1" style="width:100%">
     </a></div>
     <div class="column">
     <a href="/newFittingFactorHistogram35.pdf" target="_blank">
-    <img src="/newFittingFactorHistogram35.pdf" alt="Cross-Validated fits"  id="img2" style="width:100%">
+    <img src="/newFittingFactorHistogram35.pdf" title="Cross-Validated fits"  id="img2" style="width:100%">
     </a></div>
 </div>
 <!-- ![Cross-Validated predicted signals](/NewAllMatches35withCoRe.pdf)! -->
@@ -54,11 +72,11 @@ For unsupervised learning, I used principal component analysis to investigate th
 <div class="row">
     <div class="column">
     <a href="/PCAUnscaled3Damp.pdf" target="_blank">
-    <img src="/PCAUnscaled3Damp.pdf" alt="PCA in 3D" id="img1" style="width:100%">
+    <img src="/PCAUnscaled3Damp.pdf" title="PCA in 3D" id="img1" style="width:100%">
     </a></div>
     <div class="column">
     <a href="/PCAUnscaled2Damp.pdf" target="_blank">
-    <img src="/PCAUnscaled2Damp.pdf" alt="PCA in 2D"  id="img2" style="width:100%">
+    <img src="/PCAUnscaled2Damp.pdf" title="PCA in 2D"  id="img2" style="width:100%">
     </a></div>
 </div>
 
@@ -70,11 +88,11 @@ For supervised learning, I implemented random forest regression to predict the t
 <div class="row">
     <div class="column">
     <a href="/RFRReImALF2-q10-M1225-cv.pdf" target="_blank">
-    <img src="/RFRReImALF2-q10-M1225-cv.pdf" alt="Random Forest ALF Time Domain" id="img1" style="width:100%">
+    <img src="/RFRReImALF2-q10-M1225-cv.pdf" title="Random Forest ALF Time Domain" id="img1" style="width:100%">
     </a></div>
     <div class="column">
     <a href="/RFRelativeLabelImportance.pdf" target="_blank">
-    <img src="/RFRelativeLabelImportance.pdf" alt="Random Forest Relative Importance"  id="img2" style="width:100%">
+    <img src="/RFRelativeLabelImportance.pdf" title="Random Forest Relative Importance"  id="img2" style="width:100%">
     </a></div>
 </div>
 

@@ -29,7 +29,7 @@ render_emoji = true
 # Put all your custom variables here
 show_word_count = true
 show_reading_time = true
-localcdn = true
+localcdn = false
 favicon = "favicon.ico"
 # relative_path = true
 

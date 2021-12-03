@@ -1,0 +1,20 @@
+{% extends 'base.html' %}
+
+{% block htmltitle %}
+    404 Page Not Found
+{% endblock htmltitle %}
+
+{% block header %}
+    {{macros::header(current_url="/")}}
+{% endblock header %}
+{% block content %}
+<div class="error">
+<p style="margin-bottom:2cm;"></p>
+<h2> Sorry, cannot access this page! </h2>
+<p style="margin-bottom:1cm;"></p>
+<h3> The requested page doesn't exist
+ or you don't have access to it. </h3>
+ <p style="margin-bottom:1cm;"></p>
+ <a href="/" >Back to the main website</a>
+</div>
+{% endblock content %}

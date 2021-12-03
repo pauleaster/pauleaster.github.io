@@ -73,7 +73,7 @@ a {
     text-decoration: none;
     color: $main-blue; // sidebar text colour
     &:hover {
-        color: $yellow; // Main menu hover colour
+        color: $selected_color; // Main menu hover colour
     }
 }
 ul {
