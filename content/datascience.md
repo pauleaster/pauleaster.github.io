@@ -10,40 +10,51 @@ math = true
 
 
 # Data science and machine learning
-During four years of work in data science and astrophysics, I was involved a number of different projects which I managed with limited supervision. The first project analysed gravitational-wave data produced by numerical-relativity simulations of neutron star mergers along with associated equation of state parameters. The aim was to generate the gravitational-wave signal given the equation of state information.
+During four years of work in data science and astrophysics, I was involved a number of different projects which I managed with limited supervision. The first project analysed gravitational-wave data produced by numerical-relativity simulations of neutron star mergers along with associated equation of state parameters. The aim was to generate the gravitational-wave signal given the equation of state information. The following work was mostly performed using Python with scipy, numpy, and pandas libraries. The data visualisation was performed with a combination of matplotlib and pandas libraries. The Bayesian inference work was performed on a local computer and using High Performance Computing using Slurm.
 
 
 # Parameter estimation using Bayesian inference
-During my work at Monash University, I was fortunate to have the opportunity to contribute to the early development of the Bilby Bayesian inference package, <a href="https://pypi.org/project/bilby/" target="_blank">Bilby Pypi</a>, <a href="https://git.ligo.org/lscsoft/bilby" target="_blank">Bilby Gitlab</a>. I subsequently used Bilby to perform parameter estimation on gravitational-wave signals using two signal models that I developed. Numerical-relativity simulations predict that the gravitational waves emitted immediately after the merging of two neutron stars consist of three main frequency peaks which may drift slightly in frequency. I developed a model based on this
-prediction and by Bilby was able to perform parameter estimation of the predicted gravitational-wave signals.
+During my work at Monash University, I was fortunate to have the opportunity to contribute to the early development of the Bilby Bayesian inference package, <a href="https://pypi.org/project/bilby/" target="_blank">Bilby Pypi</a>, <a href="https://git.ligo.org/lscsoft/bilby" target="_blank">Bilby Gitlab</a>. 
+
+I subsequently used Bilby to perform parameter estimation on gravitational-wave signals using two signal models that I developed. This work is published in <a href="https://journals.aps.org/prd/abstract/10.1103/PhysRevD.102.043011" target="_blank">Physics Review D 102.043011</a>, <a href="https://arxiv.org/abs/2006.04396" target="_blank">arXiv 2006.04396</a>,  and <a href="https://github.com/pauleaster/PhDThesis/blob/71e87f2a70aab06d60ea0c9e65dc7666961d33c6/PaulEasterPhDThesis.svg" target="_blank"> Chapter three of my PhD Thesis</a>.  Numerical-relativity simulations predict that the gravitational waves emitted immediately after the merging of two neutron stars consist of three main frequency peaks which may drift slightly in frequency. I developed a model based on this prediction and performed parameter estimation of the predicted gravitational-wave signals. The model is a third order exponentially-damped sinusoid with a frequency drift term and see the above publications for the model details.
 <div class="row">
     <div class="column">
     <a href="/time_freq_0ms_time_freq.png" target="_blank">
     <img src="/time_freq_0ms_time_freq.png" title="Time and frequency fits" id="img1" style="width:100%">
     </a></div>
     <div class="column">
-    <a href="/BWPrimaryFrequency2sigma.pdf" target="_blank">
-    <img src="/BWPrimaryFrequency2sigma.pdf" title="Peak frequency inference"  id="img2" style="width:100%">
+    <a href="/BWPrimaryFrequency2sigma.svg" target="_blank">
+    <img src="/BWPrimaryFrequency2sigma.svg" title="Peak frequency inference"  id="img2" style="width:100%">
     </a></div>
 </div>
-The first plot shows two different gravitational-wave signals in four subplots. The first gravitational-wave signal is shown in the upper subplots and the other in the lower subplots. The left subplots show the time domain gravitational-wave signal and the right subplots show the corresponding frequency-domain signal. In each subplot, the black signals are the true values and the shaded signals are the values predicted from the model. The second plot shows the inference of the main frequency, $f/_{peak}$.
+The first plot shows two different gravitational-wave signals in four subplots. The first gravitational-wave signal is shown in the upper subplots and the second in the lower subplots. The left subplots show the time domain gravitational-wave signal and the right subplots show the corresponding frequency-domain signal. In each subplot, the black signals are the true values and the shaded signals are the values predicted from the model. 
+
+The second plot shows the inference of the main frequency, $f_{peak}$, for different signal-to-noise ratios. The prediction of my model is shown in blue and is contrasted against the BayesWave inference. BayesWave is a model agnostic inference tool that is used in the gravitational wave community.
+
+The above signal model was extended to measure the collapse time of the signal. This work was published in <a href="https://arxiv.org/abs/2106.04064" target="_blank">arXiv 2106.04064</a>, and <a href="https://github.com/pauleaster/PhDThesis/blob/71e87f2a70aab06d60ea0c9e65dc7666961d33c6/PaulEasterPhDThesis.svg" target="_blank">Chapter four of my PhD Thesis</a>. The following plot shows the predicted gravitational-wave signals with different collapse times. The left subplots show the time-domain signal and the right subplots show the inferred collapsed time.
+<div class="row">
+    <div class="column">
+    <a href="/dec_tc10_dist_timeplot_panels.svg" target="_blank">
+    <img src="/dec_tc10_dist_timeplot_panels.svg" title="Predicted collapse time signals and inferred collapse time" id="img1" style="width:100%">
+    </a></div>
+</div> 
 
 
 # Hierarchical machine learning model
-Following on from the analysis performed with Principal Component Analysis and the Random Forest and Lasso regressors, we developed a multi-layered machine learning algorithm that was trained to produce gravitational-wave spectra. We had a relatively small data set with 35 time-domain signals. Each of these waveforms were associated with system parameters on which we based our model. Of the thirteen system parameters, we found that we could achieve good results using Leave-One-Out Cross-Validation by using only three system parameters. The results were published in <a href="https://journals.aps.org/prd/abstract/10.1103/PhysRevD.100.043005" target="_blank">Physics Review D</a>, <a href="https://arxiv.org/abs/1811.11183" target="_blank">arXiv</a> and Chapter two of my <a href="https://github.com/pauleaster/PhDThesis/blob/71e87f2a70aab06d60ea0c9e65dc7666961d33c6/PaulEasterPhDThesis.pdf" target="_blank">PhD Thesis</a>. The following plot shows how well I was able to reconstruct the cross-validated spectrum for a given signal. 
+Following on from the analysis performed with Principal Component Analysis and the Random Forest and Lasso regressors, we developed a multi-layered machine learning algorithm that was trained to produce gravitational-wave spectra. We had a relatively small data set with 35 time-domain signals. Each of these waveforms were associated with system parameters on which we based our model. Of the thirteen system parameters, we found that we could achieve good results using Leave-One-Out Cross-Validation by using only three system parameters. The results were published in <a href="https://journals.aps.org/prd/abstract/10.1103/PhysRevD.100.043005" target="_blank">Physics Review D 100.043005</a>, <a href="https://arxiv.org/abs/1811.11183" target="_blank">arXiv 1811.11183</a> and  <a href="https://github.com/pauleaster/PhDThesis/blob/71e87f2a70aab06d60ea0c9e65dc7666961d33c6/PaulEasterPhDThesis.svg" target="_blank">Chapter two of my PhD Thesis</a>. The following plot shows how well I was able to reconstruct the cross-validated spectrum for a given signal. 
 
 <!-- <img1> -->
 <div class="row">
     <div class="column">
-    <a href="/NewAllMatches35withCoRe.pdf" target="_blank">
-    <img src="/NewAllMatches35withCoRe.pdf" title="Cross-Validated predicted signals" id="img1" style="width:100%">
+    <a href="/NewAllMatches35withCoRe.svg" target="_blank">
+    <img src="/NewAllMatches35withCoRe.svg" title="Cross-Validated predicted signals" id="img1" style="width:100%">
     </a></div>
     <div class="column">
-    <a href="/newFittingFactorHistogram35.pdf" target="_blank">
-    <img src="/newFittingFactorHistogram35.pdf" title="Cross-Validated fits"  id="img2" style="width:100%">
+    <a href="/newFittingFactorHistogram35.svg" target="_blank">
+    <img src="/newFittingFactorHistogram35.svg" title="Cross-Validated fits"  id="img2" style="width:100%">
     </a></div>
 </div>
-<!-- ![Cross-Validated predicted signals](/NewAllMatches35withCoRe.pdf)! -->
+<!-- ![Cross-Validated predicted signals](/NewAllMatches35withCoRe.svg)! -->
 <!-- </img1> -->
 
 
@@ -65,18 +76,18 @@ The model parameters are $(C, K, M)$ and the gravitational-wave signal is $H(f)$
     
 
 # Principal Components Analysis and Random Forest Regression
-In these projects, I analysed gravitational-wave time-domain signals in both the time domain and frequency (Fourier) domain. Summaries of these results are shown below, for more details refer to my <a href="https://github.com/pauleaster/HonoursThesis/blob/30d1b50cdb4f6c229e37b5b5f58c7bebdcbe81df/BNSHonoursReport.pdf" target="_blank">honours thesis</a>. The main methods used were principal components analysis, random forest regression, and lasso regression. 
+In these projects, I analysed gravitational-wave time-domain signals in both the time domain and frequency (Fourier) domain. Summaries of these results are shown below, for more details refer to my <a href="https://github.com/pauleaster/HonoursThesis/blob/30d1b50cdb4f6c229e37b5b5f58c7bebdcbe81df/BNSHonoursReport.svg" target="_blank">honours thesis</a>. The main methods used were principal components analysis, random forest regression, and lasso regression. 
 ## Principal Component Analysis 
 For unsupervised learning, I used principal component analysis to investigate the grouping of signals in respect to the principal components. The data was naturally separated into five different categories which are shown by colour on the plots below. The first plot shows the principal components when reduced to the three most significant components, and the second plot shows the projection of this plot onto the first two principal components. As can be seen from both of these plots, the APR4 (red) and SLy(pink) have similar principal components and are clustered closely in these projections. The other signals are loosely clustered together in another part of the parameter space.
 
 <div class="row">
     <div class="column">
-    <a href="/PCAUnscaled3Damp.pdf" target="_blank">
-    <img src="/PCAUnscaled3Damp.pdf" title="PCA in 3D" id="img1" style="width:100%">
+    <a href="/PCAUnscaled3Damp.svg" target="_blank">
+    <img src="/PCAUnscaled3Damp.svg" title="PCA in 3D" id="img1" style="width:100%">
     </a></div>
     <div class="column">
-    <a href="/PCAUnscaled2Damp.pdf" target="_blank">
-    <img src="/PCAUnscaled2Damp.pdf" title="PCA in 2D"  id="img2" style="width:100%">
+    <a href="/PCAUnscaled2Damp.svg" target="_blank">
+    <img src="/PCAUnscaled2Damp.svg" title="PCA in 2D"  id="img2" style="width:100%">
     </a></div>
 </div>
 
@@ -87,12 +98,12 @@ For supervised learning, I implemented random forest regression to predict the t
 
 <div class="row">
     <div class="column">
-    <a href="/RFRReImALF2-q10-M1225-cv.pdf" target="_blank">
-    <img src="/RFRReImALF2-q10-M1225-cv.pdf" title="Random Forest ALF Time Domain" id="img1" style="width:100%">
+    <a href="/RFRReImALF2-q10-M1225-cv.svg" target="_blank">
+    <img src="/RFRReImALF2-q10-M1225-cv.svg" title="Random Forest ALF Time Domain" id="img1" style="width:100%">
     </a></div>
     <div class="column">
-    <a href="/RFRelativeLabelImportance.pdf" target="_blank">
-    <img src="/RFRelativeLabelImportance.pdf" title="Random Forest Relative Importance"  id="img2" style="width:100%">
+    <a href="/RFRelativeLabelImportance.svg" target="_blank">
+    <img src="/RFRelativeLabelImportance.svg" title="Random Forest Relative Importance"  id="img2" style="width:100%">
     </a></div>
 </div>
 

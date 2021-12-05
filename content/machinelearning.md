@@ -1,7 +1,0 @@
-+++
-title = "Machine Learning"
-weight = 3
-date = "2019-03-11"
-+++
-
-Some text here!

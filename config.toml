@@ -1,5 +1,5 @@
 # The URL the site will be built for
-base_url = "http://10.0.0.152" # "pauleaster.dev"
+base_url = "http://10.0.0.152:1234" # "pauleaster.dev"
 theme = "karzok"
 output_dir = "public"
 
@@ -41,18 +41,19 @@ link = "$base_url/meta"
 text = "Data Science"
 link = "$base_url/datascience"
 class = "datascience-p"
-
-
-[[extra.menu]]
-text = "Machine Learning"
-link = "$base_url/machinelearning"
-class = "machinelearning-p"
+alt = "Data science and machine learning projects"
 
 
 [[extra.menu]]
 text = "Web Development"
 link = "$base_url/webdevelopment"
 class = "webdevelopment-p"
+alt = "Static website design and web server configuration"
+
+[[extra.menu]]
+text = "Application development"
+link = "$base_url/appdev"
+class = "appdev-p"
 
 
 [[extra.menu]]
