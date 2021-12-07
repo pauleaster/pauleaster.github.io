@@ -1,5 +1,5 @@
 # The URL the site will be built for
-base_url = "http://10.0.0.152:4321" # "pauleaster.dev"
+base_url = "http://pauleaster.dev"
 theme = "karzok"
 output_dir = "public"
 
