@@ -1,7 +1,7 @@
 +++
 title = "Astrophysics"
-weight = 4
-date = "2019-03-11"
+weight = 40
+date = "2021-12-06"
 +++
 
-Some text here!
+See the <a href="/datascience" > data science page</a> for a brief overview of my research. For more a in depth look please refer to my three papers and my honours and PhD theses also shown in the data science page.

@@ -1,42 +1,28 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9">
     <url>
-        <loc>http://10.0.0.152:1234/</loc>
+        <loc>http://10.0.0.152:4321/</loc>
     </url>
     <url>
-        <loc>http://10.0.0.152:1234/appdev/</loc>
+        <loc>http://10.0.0.152:4321/appdev/</loc>
         <lastmod>2019-03-12</lastmod>
     </url>
     <url>
-        <loc>http://10.0.0.152:1234/astrophysics/</loc>
-        <lastmod>2019-03-11</lastmod>
+        <loc>http://10.0.0.152:4321/astrophysics/</loc>
+        <lastmod>2021-12-06</lastmod>
     </url>
     <url>
-        <loc>http://10.0.0.152:1234/datascience/</loc>
+        <loc>http://10.0.0.152:4321/contact/</loc>
+    </url>
+    <url>
+        <loc>http://10.0.0.152:4321/datascience/</loc>
         <lastmod>2021-01-12</lastmod>
     </url>
     <url>
-        <loc>http://10.0.0.152:1234/meta/</loc>
+        <loc>http://10.0.0.152:4321/page/1/</loc>
     </url>
     <url>
-        <loc>http://10.0.0.152:1234/meta/code-of-conduct/</loc>
-        <lastmod>2019-03-11</lastmod>
-    </url>
-    <url>
-        <loc>http://10.0.0.152:1234/meta/markdown-syntax/</loc>
-        <lastmod>2019-03-11</lastmod>
-    </url>
-    <url>
-        <loc>http://10.0.0.152:1234/meta/mt-media/</loc>
-    </url>
-    <url>
-        <loc>http://10.0.0.152:1234/page/1/</loc>
-    </url>
-    <url>
-        <loc>http://10.0.0.152:1234/page/2/</loc>
-    </url>
-    <url>
-        <loc>http://10.0.0.152:1234/webdevelopment/</loc>
+        <loc>http://10.0.0.152:4321/webdevelopment/</loc>
         <lastmod>2021-03-12</lastmod>
     </url>
 </urlset>

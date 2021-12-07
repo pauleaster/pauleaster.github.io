@@ -1,5 +1,5 @@
 # The URL the site will be built for
-base_url = "http://10.0.0.152:1234" # "pauleaster.dev"
+base_url = "http://10.0.0.152:4321" # "pauleaster.dev"
 theme = "karzok"
 output_dir = "public"
 
@@ -10,6 +10,8 @@ default_language = "en"
 
 # Whether to build a search index to be used later on by a JavaScript library
 build_search_index = true
+
+sort_by = "weight"
 
 [markdown]
 # Whether to do syntax highlighting
@@ -33,9 +35,7 @@ localcdn = false
 favicon = "favicon.ico"
 # relative_path = true
 
-[[extra.header]]
-text = "Meta"
-link = "$base_url/meta"
+
 
 [[extra.menu]]
 text = "Data Science"
@@ -54,6 +54,7 @@ alt = "Static website design and web server configuration"
 text = "Application development"
 link = "$base_url/appdev"
 class = "appdev-p"
+alt = "Upgrading legacy code to fast and reliable rust"
 
 
 [[extra.menu]]
@@ -62,5 +63,11 @@ link = "$base_url/astrophysics"
 class = "astrophysics-p"
 
 
+
 # [[extra.logotype]]
 # path="http://10.0.0.152"
+
+
+[[extra.header]]
+text = "Contact"
+link = "$base_url/contact"

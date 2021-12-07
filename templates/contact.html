@@ -1,0 +1,30 @@
+{% extends 'karzok/templates/index.html' %}
+
+    <html class="contact">
+    <body>
+        {% block body %}
+            {% block content %}
+            {% block welcome %}
+            <h1 class="welcome"> Paul Easter's website</h1>
+            {# <p class="welcome-p">
+                Data science, machine learning, application development, web development<br>
+            </p> #}
+            <div id="contact-id" class="contact-class">
+                {# <address> #}
+                    Email: <a href="mailto:paul.john.easter@gmail.com">Paul Easter</a><br>
+                    Website: <a href="https://pauleaster.dev">pauleaster.dev</a><br>
+                    Github: <a href="https://github.com/pauleaster">github.com/pauleaster</a><br>
+                    Phone: 0477 00 8727<br>
+                    <br>
+                </div>
+            {% endblock welcome %}
+            
+            {# </address> #}
+                {% endblock content %}
+                
+        {% endblock body %}
+        
+    </body>
+    </html>
+   
+

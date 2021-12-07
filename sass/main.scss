@@ -58,6 +58,7 @@ body {
     color: #888; // Main foreground color
     height: 95vh;
 }
+
 // body{
 //         padding:10px;
 //         padding-bottom:87px;   /* Height of the footer */
@@ -79,12 +80,23 @@ a {
 ul {
     list-style: none;
 }
-
+// .div{ 
+    
+// }
 .docs {
     display: flex;
     justify-content: space-between;
     margin-bottom: 25px;
     margin-top: 15px;
+}
+#contact-id.contact-class {
+    // display: flex;
+    justify-content: center;
+    text-align: center;
+    // font-weight: 400;
+    font-size: 30px;
+    line-height: 1.5em;
+    margin-bottom: 6em
 }
 
 .welcome {
@@ -97,6 +109,7 @@ ul {
         display: flex;
         justify-content: center;
     }
+    
 }
 .error {
     display: flex;

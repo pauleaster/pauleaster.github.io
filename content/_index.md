@@ -1,10 +1,5 @@
 +++
-title = "Paul Easter"
-
-paginate_by = 2
+title = "My Website"
+paginate_by = 5
 sort_by = "weight"
 +++
-
-render = true
-
-Some more text, not sure where it will end up!

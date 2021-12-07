@@ -1,6 +1,6 @@
 +++
 title = "Web development"
-weight = 2
+weight = 30
 
 date = "2021-03-12"
 +++
@@ -17,4 +17,5 @@ An  <a href="https://httpd.apache.org" target="_blank">apache server</a> has als
 for a total server-less configuration which would eliminate a single point of failure for the server. An alternative server-less hosting paradigm  would use a light-weight server, for example <a href="https://github.com/joseluisq/static-web-server" target="_blank">static-web-server</a> , also written in rust, in a container (e.g. Docker) configuration.
 
 
-
+# Mobile websites
+Note that this website has yet to be optimised for mobile websites. This is on my `todo()` list.
