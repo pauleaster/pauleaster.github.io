@@ -41,7 +41,7 @@ The above signal model was extended to measure the collapse time of the signal. 
 
 
 # Hierarchical machine learning model
-Following on from the analysis performed with Principal Component Analysis and the Random Forest and Lasso regressors, we developed a multi-layered machine learning algorithm that was trained to produce gravitational-wave spectra. We had a relatively small data set with 35 time-domain signals. Each of these waveforms were associated with system parameters on which we based our model. Of the thirteen system parameters, we found that we could achieve good results using Leave-One-Out Cross-Validation by using only three system parameters. The results were published in <a href="https://journals.aps.org/prd/abstract/10.1103/PhysRevD.100.043005" target="_blank">Physics Review D 100.043005</a>, <a href="https://arxiv.org/abs/1811.11183" target="_blank">arXiv 1811.11183</a> and  <a href="https://github.com/pauleaster/PhDThesis/blob/71e87f2a70aab06d60ea0c9e65dc7666961d33c6/PaulEasterPhDThesis.pdf" target="_blank">Chapter two of my PhD Thesis</a>. The following plot shows how well I was able to reconstruct the cross-validated spectrum for a given signal. 
+We developed a multi-layered machine learning algorithm that was trained to produce gravitational-wave spectra. This investigation followed on from an earlier analysis using   <a href="https://pauleaster.dev/datascience/#principal-components-analysis-and-random-forest-regression">Principal Component Analysis, and Random Forest and Lasso regressors</a>. We had a relatively small data set with 35 time-domain signals. Each of these waveforms were associated with system parameters on which we based our model. Of the thirteen system parameters, we found that we could achieve good results using Leave-One-Out Cross-Validation by using only three system parameters. The results were published in <a href="https://journals.aps.org/prd/abstract/10.1103/PhysRevD.100.043005" target="_blank">Physics Review D 100.043005</a>, <a href="https://arxiv.org/abs/1811.11183" target="_blank">arXiv 1811.11183</a> and  <a href="https://github.com/pauleaster/PhDThesis/blob/71e87f2a70aab06d60ea0c9e65dc7666961d33c6/PaulEasterPhDThesis.pdf" target="_blank">Chapter two of my PhD Thesis</a>. The following plot shows how well I was able to reconstruct the cross-validated spectrum for a given signal. 
 
 <!-- <img1> -->
 <div class="row">
@@ -94,7 +94,7 @@ For unsupervised learning, I used principal component analysis to investigate th
 
 
 ## Random Forest
-For supervised learning, I implemented random forest regression to predict the time domain signal given a number of neutron star parameters. This was performed in the frequency domain with the intention of predicting a time domain signal. The following plot shows the amplitude and phase of the original signal in black, followed by the leave-one-out cross-validated prediction in blue. The bottom trace shows the time domain signals for both. The right hand plot shows the relative importance of each parameter determined from the random forest decision trees. At face value, it appears that the first four parameters: $\bar{R}, \bar{k}\_{2}, J, M\_{b}$, account for around 50% of the variance due to parameters, however this is not the whole story, as there are cross-correlations between a number of parameters which has not been shown here. 
+For supervised learning, I implemented random forest regression to predict the time domain signal given a number of neutron star parameters. This was performed in the frequency domain with the intention of predicting a time domain signal. The following plot shows the amplitude and phase of the original signal in black, followed by the leave-one-out cross-validated prediction in blue. The bottom trace shows the time domain signals for both. The right hand plot shows the relative importance of each parameter determined from the random forest decision trees. At face value, it appears that the first four parameters: $\bar{R}, \bar{k}\_{2}, J, M\_{b}$, account for around 50% of the variance due to parameters, however this is not the whole story, as there are correlations between a number of parameters which has not been shown here. 
 
 <div class="row">
     <div class="column">
@@ -106,4 +106,8 @@ For supervised learning, I implemented random forest regression to predict the t
     <img src="/RFRelativeLabelImportance.jpg" title="Random Forest Relative Importance"  id="img2" style="width:100%">
     </a></div>
 </div>
-
+<br>
+<br>
+<br>
+<br>
+<br>
