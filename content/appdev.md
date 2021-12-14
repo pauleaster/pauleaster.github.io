@@ -5,7 +5,7 @@ date = "2019-03-12"
 +++
 
 # Upgrading legacy code
-I have recently upgraded two applications to high performant rust code. Because of the design of the rust language, many applications are faster "out of the box" after implementation in rust. The two test cases that I have worked with are:
+I have recently upgraded two applications to high performant <a href="https://www.rust-lang.org" target="_blank">rust</a> code. Because of the design of the rust language, many applications are faster "out of the box" after implementation in rust. The two test cases that I have worked with are:
 
 1. Rapidly rotating Neutron Star (RNS): C code was written in 1995 by <a href="
 https://www.astro.auth.gr/~niksterg/" target="_blank">Nikolaos
