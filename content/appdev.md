@@ -1,11 +1,24 @@
 +++
 title = "Application development"
 weight = 20
-date = "2021-12-14"
+date = "2022-01-18"
 +++
 
+# Serverless AWS REST framework
+I have created a working skeleton for a serverless rust application that uses an <a href="https://docs.aws.amazon.com/lambda/latest/dg/welcome.html" target="_blank">Amazon AWS Lambda function</a> with an <a href="https://aws.amazon.com/api-gateway" target="_blank">AWS API Gateway</a> that was configured using <a href="https://www.terraform.io" target="_blank">Terraform</a>. If you enter values for a, b, and c below and click on the submit button then your values will be sent to the AWS API Gateway and forwarded on to the rust lambda function. Here the payload is examined and the query data in the form of key:value are displayed on a new tab in your web browser. 
+
+Enter values here:
+<form action="https://xxw2x1h890.execute-api.ap-southeast-2.amazonaws.com" method="GET" target="_blank">
+    a = <input type="text" name="a" value="1" />
+    b = <input type="text" name="b" value="2" />
+    c = <input type="text" name="c" value="5" />
+    <input type="submit">
+</form>
+
+This short project took less than two days to get going and the code is shown <a href="https://github.com/pauleaster/aws-lambda-rust-test" target="_blank">here</a>.
+
 # Upgrading legacy code
-I have recently upgraded two applications to high performant <a href="https://www.rust-lang.org" target="_blank">rust</a> code. Because of the design of the rust language, many applications are faster "out of the box" after implementation in rust. The two test cases that I have worked with are:
+I have upgraded two applications to high performant <a href="https://www.rust-lang.org" target="_blank">rust</a> code. Because of the design of the rust language, many applications are faster "out of the box" after implementation in rust. The two test cases that I have worked with are:
 
 1. Rapidly rotating Neutron Star (RNS): C code was written in 1995 by <a href="
 https://www.astro.auth.gr/~niksterg/" target="_blank">Nikolaos
