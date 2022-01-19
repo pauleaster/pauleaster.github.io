@@ -54,7 +54,7 @@ alt = "Static website design and web server configuration"
 text = "Application development"
 link = "$base_url/appdev"
 class = "appdev-p"
-alt = "Upgrading legacy code to fast and reliable rust"
+alt = "Serverless AWS REST framework, upgrading legacy code to fast and reliable rust"
 
 
 [[extra.menu]]
