@@ -12,4 +12,4 @@ jobs:
           # Target branch
           PAGES_BRANCH: gh-pages
           # Provide personal access token
-          TOKEN: ${{ secrets.PHOEBE_PC_WEBSITE_TOKEN }}
+          TOKEN: ${{ secrets.WEBSITE_TOKEN }}
