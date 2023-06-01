@@ -1,2 +1,2 @@
 # pauleaster.dev
-This is the source code for my website.
+This is the source for my website.
