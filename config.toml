@@ -1,0 +1,73 @@
+# The URL the site will be built for
+base_url = "https://pauleaster.dev"
+theme = "karzok"
+# output_dir = "public"
+
+# Whether to automatically compile all Sass files in the sass directory
+compile_sass = true
+
+default_language = "en"
+
+# Whether to build a search index to be used later on by a JavaScript library
+build_search_index = true
+
+sort_by = "weight"
+
+[markdown]
+# Whether to do syntax highlighting
+# Theme can be customised by setting the `highlight_theme` variable to a theme supported by Zola
+highlight_code = true
+highlight_theme = "base16-ocean-dark"
+
+render_emoji = true
+
+# taxonomies = [
+#     {name = "authors"},
+# ]
+
+
+
+[extra]
+# Put all your custom variables here
+show_word_count = true
+show_reading_time = true
+localcdn = false
+favicon = "favicon.ico"
+# relative_path = true
+
+
+
+[[extra.menu]]
+text = "Data Science"
+link = "$base_url/datascience"
+class = "datascience-p"
+alt = "Data science and machine learning projects"
+
+
+[[extra.menu]]
+text = "Web Development"
+link = "$base_url/webdevelopment"
+class = "webdevelopment-p"
+alt = "Static website design and web server configuration"
+
+[[extra.menu]]
+text = "Application development"
+link = "$base_url/appdev"
+class = "appdev-p"
+alt = "Serverless AWS REST framework, upgrading legacy code to fast and reliable rust"
+
+
+[[extra.menu]]
+text = "Astrophysics"
+link = "$base_url/astrophysics"
+class = "astrophysics-p"
+
+
+
+# [[extra.logotype]]
+# path="http://10.0.0.152"
+
+
+[[extra.header]]
+text = "Contact"
+link = "$base_url/contact"

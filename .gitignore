@@ -1,0 +1,7 @@
+*.code-workspace
+public/
+static/favicon_io*
+.vscode/
+unused/
+meta-unused/
+website/

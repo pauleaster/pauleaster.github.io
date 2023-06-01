@@ -1,0 +1,53 @@
+.menu {
+    font-family: 'Roboto', sans-serif;
+    display: grid;
+    padding: 0.95rem;
+    margin-bottom: 1em;
+    grid-gap: 1rem;
+    grid-template-rows: auto;
+    grid-template-columns: repeat(auto-fit, minmax(200px,1fr));
+    min-height: calc(30vh - 84px);
+    height: auto;
+    width: 100%;
+    &-a {
+        position: relative;
+        margin-top: 1em;
+        padding: 1rem;
+        width: 75%;
+        height: 250px;
+        color: #888;
+        background-color: rgb(100, 77, 111);
+        box-shadow: 8px 8px 8px 0 rgb(0, 0, 0);
+        text-decoration: none;
+        & h3 {
+            font-size: 20px;
+            text-align: center;
+            margin-bottom: 2rem;
+        }
+    }
+    &-index {
+        padding-top: 2em;
+    }
+    &-time {
+        display: flex;
+        font-size: 14px;
+        font-weight: 400;
+        color: $dark3;
+        padding-bottom: 2em;
+    }
+    &-a:hover {
+        border: 1px solid;
+        border-color: transparent;
+        color: $white;
+        outline: 5px solid rgb(75, 40, 64); // Outline of menu on home page
+    }
+    svg {
+        position: fixed;
+        transform: translate(25em, -2.75em);
+    }
+    & p {
+        color: #BBB; // Secondary menu text
+        overflow: hidden;
+        text-align: left;
+    }
+}

@@ -1,0 +1,131 @@
+// Color system variables
+$black: #111111 !default;
+$dark3: #333333 !default;
+$dark2: #555555 !default;
+$dark1: #777777 !default;
+$light1: #999999 !default;
+$light2: #bbbbbb !default;
+$light3: #dddddd !default;
+$light4: #f9f9f9  !default;
+$white: #ffffff !default;
+$red: #ff4136 !default;
+$orange: #ff851b !default;
+$yellow: #ffdc00 !default;
+$green: #2ecc40 !default;
+$aqua: #7fdbff !default;
+$blue: #0074d9 !default;
+$purple: #b10dc9 !default;
+$brown: #85144b !default;
+
+$main-blue: rgb(100,130,200);
+$background-color: rgb(29, 19, 45); 
+$selected_color: rgb(173,127,205);
+$highlighted-color: rgb(84, 47, 101);
+
+// :root {
+//     --black: #{$black};
+//     --white: #{$white};
+//     --green: #{$green};
+// }
+
+// $black: var(--black);
+// $green: var(--green);
+// $white: var(--white);
+
+
+// Import components
+@import 'src/toc';
+@import 'src/sidebar';
+@import 'src/header';
+@import 'src/page';
+@import 'src/footer';
+@import 'src/menu';
+@import 'src/menutext';
+
+
+
+* {
+    margin: 0;
+    padding: 0;
+    border: 0;
+}
+
+html,
+body {
+    font-family: 'Roboto', sans-serif;
+    background-size: 100% 100%;
+    background-color:$background-color; // Main background colour
+    color: #888; // Main foreground color
+    height: 95vh;
+}
+
+// body{
+//         padding:10px;
+//         padding-bottom:87px;   /* Height of the footer */
+// }
+// footer {
+//     position:absolute;
+//     bottom:0;
+//     width:100%;
+//     height:87px;   /* Height of the footer */
+//     background:#6cf;
+//  }
+a {
+    text-decoration: none;
+    color: $main-blue; // sidebar text colour
+    &:hover {
+        color: $selected_color; // Main menu hover colour
+    }
+}
+ul {
+    list-style: none;
+}
+// .div{ 
+    
+// }
+.docs {
+    display: flex;
+    justify-content: space-between;
+    margin-bottom: 25px;
+    margin-top: 15px;
+}
+#contact-id.contact-class {
+    // display: flex;
+    justify-content: center;
+    text-align: center;
+    // font-weight: 400;
+    font-size: 30px;
+    line-height: 1.5em;
+    margin-bottom: 6em
+}
+
+.welcome {
+    display: flex;
+    justify-content: center;
+    font-weight: 400;
+    font-size: 75px;
+    padding-top: 0.2em;
+    &-p {
+        display: flex;
+        justify-content: center;
+    }
+    
+}
+.error {
+    display: flex;
+    flex-flow: column;
+    align-items: center;
+    font-weight: 400;
+    margin-bottom: 2em;
+    min-height: calc(100vh - 87px);
+    & h1 {
+        font-size: 75px;
+    }
+    & h2 {
+        font-size: 50px;
+    }
+    & h3 {
+        font-size: 25px;
+    }
+}
+

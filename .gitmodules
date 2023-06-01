@@ -1,0 +1,3 @@
+[submodule "themes/karzok"]
+	path = themes/karzok
+	url = git@github.com:pauleaster/karzok_fork.git

@@ -1,0 +1,43 @@
+.toc {
+    position: sticky;
+    top: 4rem;
+    box-sizing: border-box;
+    margin-right: 1.25em;
+    height: calc(110vh - 1rem);
+    overflow-y: hidden;
+    overflow-x: hidden;
+    margin-left: 1em;
+    width: 250px;
+    &-ul {
+        position: sticky;
+        border-left: 3px solid;
+        padding-left: 0;
+        border-color: #505;
+        max-width: 100%;
+    }
+    &-li {
+        position: relative;
+        margin-top: 0.345rem;
+        padding-top: 0.345rem;
+    }
+    &-a {
+        display: block;
+        letter-spacing: normal;
+        margin-left: 24px;
+        padding: 8px 0;
+        font-size: 15px;
+        line-height: 16px;
+    }
+    &-a:hover{
+        color: $selected_color;
+    }
+    &-li:hover::before,
+    &-li__active::before {
+        position: absolute;
+        left: -3px;
+        height: 100%;
+        content: '';
+        border-left: 3px solid;
+        border-color: $selected_color;
+    }
+}
