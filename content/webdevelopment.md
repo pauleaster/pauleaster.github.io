@@ -6,7 +6,7 @@ date = "2021-03-12"
 +++
 
 # This website
-This website has been designed using <a href="https://www.getzola.org" target="_blank">Zola static website software</a>  which has been written in the <a href="https://www.rust-lang.org" target="_blank">rust programming language</a>. It uses an extensively modified <a href="https://www.getzola.org/themes/karzok/" target="_blank">Karzok template</a> and is currently served on  <a href="https://pages.github.com" target="_blank">Github pages</a>.
+This website has been designed using <a href="https://www.getzola.org" target="_blank">Zola static website software</a>  which has been written in the <a href="https://www.rust-lang.org" target="_blank">rust programming language</a>. It uses an extensively modified <a href="https://fmatch.org/karzok" target="_blank">Karzok template</a> and is currently served on  <a href="https://pages.github.com" target="_blank">Github pages</a>.
 To get this website up and running it was necessary to code in html, css, shortcodes, and markdown.
 
 
