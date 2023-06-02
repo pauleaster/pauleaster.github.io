@@ -9,8 +9,8 @@ jobs:
     steps:
       - name: checkout @ master
         uses: actions/checkout@master
-      - name: build_and_deploy zola-deploy-action@master
-        uses: shalzz/zola-deploy-action@master
+      - name: build_and_deploy zola-deploy-action@0.15.2
+        uses: shalzz/zola-deploy-action@0.15.2
         env:
           # Target branch
           PAGES_BRANCH: gh-pages
