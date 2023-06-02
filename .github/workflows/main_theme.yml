@@ -1,4 +1,4 @@
-name: Zola on GitHub Pages from master
+name: Zola on GitHub Pages from master with theme
 
 on: 
  push:
