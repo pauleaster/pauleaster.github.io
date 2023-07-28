@@ -20,13 +20,13 @@ jobs:
     - name: Checkout main
       uses: actions/checkout@v3.0.0
 
-    - name: Get Doxygen Documentation
-      run: |
-        git clone -b gh-pages --single-branch https://github.com/pauleaster/encrypted_buffer_cpp.git temp_docs
-        PROJECT_NAME=$(grep "PROJECT_NAME " temp_docs/Doxyfile | cut -d "=" -f 2 | tr -d ' "')
-        mkdir -p "./static/$PROJECT_NAME"
-        cp -r temp_docs/* "./static/$PROJECT_NAME"
-        rm -rf temp_docs
+    # - name: Get Doxygen Documentation
+    #   run: |
+    #     git clone -b gh-pages --single-branch https://github.com/pauleaster/encrypted_buffer_cpp.git temp_docs
+    #     PROJECT_NAME=$(grep "PROJECT_NAME " temp_docs/Doxyfile | cut -d "=" -f 2 | tr -d ' "')
+    #     mkdir -p "./static/$PROJECT_NAME"
+    #     cp -r temp_docs/* "./static/$PROJECT_NAME"
+    #     rm -rf temp_docs
     
 
     - name: Build and deploy
