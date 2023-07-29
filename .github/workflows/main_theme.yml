@@ -27,8 +27,9 @@ jobs:
         echo "********** PROJECT_NAME **********"
         echo "PROJECT_NAME: $PROJECT_NAME"
         echo "********** PROJECT_NAME **********"
-        mkdir -p "./static/$PROJECT_NAME"
-        cp -r temp_docs/* "./static/$PROJECT_NAME"
+        mkdir -p "./static/documentation"
+        mkdir -p "./static/documentation/$PROJECT_NAME"
+        cp -r temp_docs/* "./static/documentation/$PROJECT_NAME"
         rm -rf temp_docs
 
 
