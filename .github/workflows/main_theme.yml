@@ -1,9 +1,16 @@
 name: Zola on GitHub Pages from master with theme
 
-on: 
- push:
-  branches:
-   - main
+on:
+  push:
+    branches-ignore:
+      - gh-pages
+  pull_request:
+    branches-ignore:
+      - gh-pages
+  workflow_dispatch:
+  repository_dispatch:
+    types: [tls-buffer-comm-deploy]
+
 
 jobs:
   build:
@@ -12,6 +19,19 @@ jobs:
     steps:
     - name: Checkout main
       uses: actions/checkout@v3.0.0
+
+    - name: Get Doxygen Documentation
+      run: |
+        git clone -b gh-pages --single-branch https://github.com/pauleaster/encrypted_buffer_cpp.git temp_docs
+        PROJECT_NAME=$(cat temp_docs/project_name.txt)
+        echo "********** PROJECT_NAME **********"
+        echo "PROJECT_NAME: $PROJECT_NAME"
+        echo "********** PROJECT_NAME **********"
+        mkdir -p "./static/$PROJECT_NAME"
+        cp -r temp_docs/* "./static/$PROJECT_NAME"
+        rm -rf temp_docs
+
+
     - name: Build and deploy
       uses: shalzz/zola-deploy-action@master
       env:
