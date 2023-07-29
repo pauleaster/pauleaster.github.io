@@ -47,7 +47,7 @@ jobs:
         echo "PROJECT_NAME: $PROJECT_NAME"
         echo "*************************************"
 
-    # - name: Build and deploy
-    #   uses: shalzz/zola-deploy-action@master
-    #   env:
-    #     GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
+    - name: Build and deploy
+      uses: shalzz/zola-deploy-action@master
+      env:
+        GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
