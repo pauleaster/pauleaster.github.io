@@ -31,7 +31,7 @@ jobs:
         ls -al temp_docs/Doxyfile
         echo "*************************************"
         echo "Calculating PROJECT_NAME"
-        PROJECT_NAME=$(grep "PROJECT_NAME " temp_docs/Doxyfile | cut -d "=" -f 2 | tr -d ' "')
+        PROJECT_NAME=$(cat temp_docs/project_name.txt)
         echo "PROJECT_NAME: $PROJECT_NAME"
         echo "*************************************"
         mkdir -p "./static/$PROJECT_NAME"
