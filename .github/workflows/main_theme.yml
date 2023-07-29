@@ -27,9 +27,19 @@ jobs:
     #     mkdir -p "./static/$PROJECT_NAME"
     #     cp -r temp_docs/* "./static/$PROJECT_NAME"
     #     rm -rf temp_docs
-    
+    - name: Verify Doxygen Documentation Copy
+      run: |
+        pwd
+        echo "*************************************"
+        echo "ls -al ./static"
+        ls -al ./static
+        echo "*************************************"
+        echo "ls -al ./static/$PROJECT_NAME"
+        ls -al "./static/$PROJECT_NAME"
+        echo "PROJECT_NAME: $PROJECT_NAME"
+        echo "*************************************"
 
-    - name: Build and deploy
-      uses: shalzz/zola-deploy-action@master
-      env:
-        GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
+    # - name: Build and deploy
+    #   uses: shalzz/zola-deploy-action@master
+    #   env:
+    #     GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
