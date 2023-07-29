@@ -22,13 +22,14 @@ jobs:
 
     - name: Get Doxygen Documentation
       run: |
-        git clone -b gh-pages --single-branch https://github.com/pauleaster/encrypted_buffer_cpp.git temp_docs
+        git clone -b gh-pages --single-branch https://github.com/pauleaster/TLSBufferComm.git temp_docs
         PROJECT_NAME=$(cat temp_docs/project_name.txt)
         echo "********** PROJECT_NAME **********"
         echo "PROJECT_NAME: $PROJECT_NAME"
         echo "********** PROJECT_NAME **********"
-        mkdir -p "./static/$PROJECT_NAME"
-        cp -r temp_docs/* "./static/$PROJECT_NAME"
+        mkdir -p "./static/documentation"
+        mkdir -p "./static/documentation/$PROJECT_NAME"
+        cp -r temp_docs/* "./static/documentation/$PROJECT_NAME"
         rm -rf temp_docs
 
 
