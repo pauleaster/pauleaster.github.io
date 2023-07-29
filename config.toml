@@ -62,7 +62,11 @@ text = "Astrophysics"
 link = "$base_url/astrophysics"
 class = "astrophysics-p"
 
-
+[[extra.menu]]
+text = "Software documentation"
+link = "$base_url/documentation"
+class = "documentation-p"
+alt = "Doxygen created documentation"
 
 # [[extra.logotype]]
 # path="http://10.0.0.152"
