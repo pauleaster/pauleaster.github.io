@@ -27,8 +27,8 @@ jobs:
         echo "ls -al temp_docs"
         ls -al temp_docs
         echo "*************************************"
-        echo "ls -al temp_docs/Doxfile"
-        ls -al temp_docs/Doxyfile
+        echo "ls -al temp_docs/project_name.txt"
+        ls -al temp_docs/project_name.txt
         echo "*************************************"
         echo "Calculating PROJECT_NAME"
         PROJECT_NAME=$(cat temp_docs/project_name.txt)
