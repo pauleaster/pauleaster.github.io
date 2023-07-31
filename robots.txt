@@ -1,0 +1,2 @@
+User-agent: *
+Sitemap: https://pauleaster.dev/sitemap.xml
